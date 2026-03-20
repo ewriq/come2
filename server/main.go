@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	if (database.InitDB()) != nil {
-		fmt.Println("Database init failed")
+	if err := database.InitDB(); err != nil {
+		fmt.Println("Database init failed:", err)
 	}
 }
