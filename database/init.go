@@ -1,6 +1,9 @@
 package database
 
 import (
+	"os"
+	"path/filepath"
+
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -9,7 +12,13 @@ import (
 var DB *gorm.DB
 
 func InitDB() error {
-	dbFile := "C:/Users/Administrator/GolandProjects/come2/data/come2.db"
+	rootDir := filepath.FromSlash("C:/Users/Administrator/GolandProjects/come2")
+	dbDir := filepath.Join(rootDir, "data")
+	if err := os.MkdirAll(dbDir, 0o755); err != nil {
+		return err
+	}
+
+	dbFile := filepath.Join(dbDir, "come2.db")
 
 	gdb, err := gorm.Open(sqlite.Open(dbFile),
 		&gorm.Config{
@@ -23,4 +32,9 @@ func InitDB() error {
 
 	DB = gdb
 	return nil
+}
+
+// GetDB returns the initialized *gorm.DB (may be nil if InitDB not called or failed).
+func GetDB() *gorm.DB {
+	return DB
 }

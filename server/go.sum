@@ -1,5 +1,3 @@
-github.com/ewriq/come2 v0.0.0-20260320213647-5bb08155692b h1:BReMT+w4gqzJEhHV5M26+ZuqfkFKuK76thrGkaZX1LY=
-github.com/ewriq/come2 v0.0.0-20260320213647-5bb08155692b/go.mod h1:H2ngwq2iXdTDRTdqsTc97atZ78J+ukKsdC4MYJJKv0s=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
 github.com/jinzhu/now v1.1.5 h1:/o9tlHleP7gOFmsnYNz3RGnqzefHA47wQpKrrdTIwXQ=
